@@ -1,0 +1,428 @@
+/* 基本設定 */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Helvetica';
+    font-style: normal;
+    color: #FFFFFF;
+    height: 100vh;
+    background: #141414;
+}
+
+/* 字型設定 */
+h3 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.b1 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.25px;
+}
+
+.b3 {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0.8px;
+}
+
+.b4 {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 120%;
+    letter-spacing: 0.8px;
+}
+
+.btn4 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 1.25px;
+}
+
+/* 容器設定 */
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width:1200px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .container {
+        max-width: 375px;
+    }
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+/* header設定 */
+header {
+    background: #141414;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+/* logo設定 */
+header .logo img {
+    width: 152px;
+    height: 30px;
+    margin: 13px 0px;
+}
+
+@media screen and (max-width:768px) {
+    header .logo img {
+        margin: 16px 0px;
+    }
+}
+
+header .container {
+    justify-content: space-between;
+    padding: 0px 26px;
+}
+
+/* logo和nav設定 */
+header nav {
+    margin-left: 68px;
+}
+
+@media screen and (max-width:1200px) {
+    header nav {
+        margin-left: 40px;
+    }
+}
+
+/* 連結設定 */
+header nav a {
+    opacity: 0.8;
+    padding: 20px;
+    position: relative;
+}
+
+@media screen and (max-width:1200px) {
+    header nav a {
+        padding: 20px 10px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    header .navbar {
+        display: none;
+    }
+
+    header .pad {
+        display: none;
+    }
+}
+
+/* 連結的hover效果：底線 */
+header nav a::after {
+    content: "";
+    width: 0px;
+    height: 2px;
+    background-color: #FFFFFF;
+    border-radius: 40px;
+    position: absolute;
+    bottom: 0;
+    left: 22.5%;
+    transition: all .3s Ease out;
+}
+
+@media screen and (max-width:1200px) {
+    header nav a::after {
+        left: 15%;
+    }
+}
+
+header nav a:hover::after {
+    width: 56px;
+}
+
+header .language {
+    cursor: pointer;
+    padding-top: 20px;
+    padding-bottom: 22px;
+    opacity: 0.7;
+}
+
+@media screen and (max-width:1200px) {
+    header .language {
+        display: none;
+    }
+}
+
+header .search {
+    width: 22px;
+    height: 22px;
+    margin: 0px 24px 0px 30px;
+    cursor: pointer;
+    background-image: url("../image/search_white.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+}
+
+header .search:hover {
+    background-image: url("../image/search_blue.svg");
+}
+
+header .user {
+    padding: 0px 4px;
+}
+
+header .user li {
+    padding: 11.5px 10px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+header .user li:hover {
+    opacity: 1;
+}
+
+header .user .border {
+    color: #B0B0B0;
+}
+
+header .line {
+    width: 61px;
+    height: 0px;
+    opacity: 0.12;
+    border: 1px solid #FFFFFF;
+    transform: rotate(-65.56deg);
+}
+
+header .menu {
+    opacity: 0.8;
+    padding: 13px 8px;
+    gap: 5px;
+    transition: all .3s Ease out;
+}
+
+header .menu:hover {
+    gap: 3px;
+    margin: 0px 2px;
+}
+
+header .phone {
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+    header .phone {
+        display: flex;
+        gap: 14px;
+    }
+
+    header .phone .text {
+        border: 1px solid #727272;
+        border-radius: 8px;
+        padding: 13px 16px;
+    }
+
+    header .phone .bell {
+        width: 40px;
+        height: 40px;
+        background-image: url("../image/bell_white.svg");
+        background-position: center;
+        background-size: 20px;
+        background-repeat: no-repeat;
+        border: 1px solid rgba(199, 199, 199, 0.4);
+        border-radius: 100px;
+    }
+
+    header .phone .bell:hover {
+        background-image: url("../image/bell_blue.svg");
+    }
+
+}
+
+/* body設定 */
+.banner {
+    height: 520px;
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (max-width:1200px) {
+    .banner {
+        height: 370px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .banner {
+        height: 235px;
+    }
+}
+
+.banner-back {
+    background-image: url("../image/banner.svg");
+}
+
+.banner-front {
+    background: linear-gradient(180deg, rgba(30, 30, 30, 0.021978) 0%, #1E1E1E 100%);
+}
+
+.banner-front::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 566px;
+    background: url("../image/shine.gif");
+    background-size: contain;
+    opacity: 0.06;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.banner main {
+    position: relative;
+    top: 366px;
+    background: rgba(30, 30, 30, 0.29);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+@media screen and (max-width:1200px) {
+    .banner main {
+        top: 320px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .banner main {
+        top: 143px;
+    }
+}
+
+.icon-GODDESS_OF_VICTORY_NIKKE {
+    width: 102px;
+    height: 102px;
+}
+
+.text-GODDESS_OF_VICTORY_NIKKE {
+    color: #9B9B9B;
+    padding: 10px 0px;
+}
+
+.gap-28 {
+    gap: 28px;
+}
+
+.banner main .container .row {
+    justify-content: center;
+}
+
+@media screen and (max-width:768px) {
+    .banner main .container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.banner .button-game {
+    width: 100px;
+    height: 30px;
+    border: 1px solid rgb(255, 255, 255);
+    opacity: 0.4;
+    border-radius: 40px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.banner p {
+    max-width: 502px;
+    opacity: 0.8;
+    margin: 37px 50px 45px 53px;
+}
+
+@media screen and (max-width:1200px) {
+    .banner p {
+        max-width: 337px;
+        margin: 29px 33px 0px 53px;
+    }
+}
+
+button {
+    width: 213px;
+    height: 80px;
+    color: #FFFFFF;
+    background: #DE280A;
+    border: 0px solid #FFFFFF;
+    border-radius: 8px;
+    transition: all .3s Ease out;
+}
+
+button:hover {
+    width: 194px;
+    height: 73px;
+    margin: 9.5px;
+}
+
+@media screen and (max-width:768px) {
+    button {
+        display: none;
+    }
+}
+
+.banner main .phone {
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+    .banner main .phone {
+        display: block;
+        text-align: center;
+        background: #393939;
+        border-radius: 8px;
+        padding: 10px 0px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .banner main .col-sm {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .px18-sm {
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+    .me18-sm {
+        margin-bottom: 28px;
+    }
+}
